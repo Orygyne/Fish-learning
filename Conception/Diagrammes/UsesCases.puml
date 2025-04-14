@@ -1,0 +1,43 @@
+@startuml UsesCases
+
+left to right direction
+
+actor Visitor
+actor User
+actor Administrator
+
+User -|> Visitor
+
+package "Public functionalities" {
+    Visitor --> (Register)
+    Visitor --> (Log in)
+    Visitor --> (Latest news)
+    Visitor --> (Subscribe to newsletter)
+    Visitor --> (Read FAQ)
+    Visitor --> (Choose language)
+    Visitor --> (Turn on DarkMode)
+}
+
+package "User features" {
+    User --> (Modify profile)
+    User --> (Reset password)
+    User --> (Delete account / request data)
+    User --> (Answer questionnaire)
+    User --> (See recommendations)
+    User --> (Save recommendations)
+    User --> (View fish files)
+    User --> (View equipment data sheets)
+    User --> (View technical data)
+    User --> (Report error)
+    User --> (Activate location)
+    User --> (Receive notifications)
+}
+
+package "Administrator features" {
+    Administrator --> (Manage files)
+    Administrator --> (Manage users)
+    Administrator --> (Access statistics)
+    Administrator --> (View logs)
+}
+
+@enduml
