@@ -30,6 +30,7 @@ Le concept de l'application est de proposer aux pêcheurs des outils pour appren
 # Expérience utilisateur (UX/UI)
 
 - Design responsive : utilisations à minima sur un ordinateur et un mobile pour la portabilité
+- respecte les normes d'accessibilité
 - Fonction dark mode ?
 - Localisation GPS ?
 - Navigation intuitive
