@@ -1,0 +1,19 @@
+@startuml RegisterLoginActivity
+
+
+|**CLIENT**|
+start
+repeat :LoginPage;
+if (Have an account) then (Yes)
+    :Login form;
+    :Send form;
+else (No)
+:Signup form;
+:Send form;
+endif
+|**BACKEND**|
+:Validation;
+backward :Redirection page;
+repeat while (Valid input ?) is (No) not (Yes)
+stop
+@enduml
