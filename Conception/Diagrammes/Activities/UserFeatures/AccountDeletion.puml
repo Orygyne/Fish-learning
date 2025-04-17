@@ -1,0 +1,27 @@
+@startuml AccountDeletion
+:Login page;
+:Login form;
+:Send form;
+if (Valid input ?) then (Yes)
+    :Redirection to Dashboard;
+    :User click on application parameters icon;
+    :User navigate to account management;
+    :User click on account deletion request;
+    :Display account deletion request warning;
+    if (User answer) then (Yes)
+        :Display deletion request;
+        :Displays a request to retrieve personal user's data;
+        :Automated account deletion;
+        :Automatic email sent to user account address to confirm deletion;
+        stop
+    else (No)
+        :Nothing happen;
+        :User is sent back to account management page;
+        stop
+    endif
+else (No)
+    :Display error message;
+    :Allow user to retry;
+    stop
+endif
+@enduml

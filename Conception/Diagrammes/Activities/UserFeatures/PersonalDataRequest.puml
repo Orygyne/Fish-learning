@@ -1,0 +1,24 @@
+@startuml PersonalDataRequest
+:Login page;
+:Login form;
+:Send form;
+if (Valid input ?) then (Yes)
+    :Redirection to Dashboard;
+    :User click on application parameters icon;
+    :User navigate to account management;
+    :User click on personal data request;
+    :Display personal data request warning;
+    if (User answer) then (Yes)
+        :Automatic email sent to user account address to with personal data;
+        stop
+    else (No)
+        :Nothing happen;
+        :User is sent back to account management page;
+        stop
+    endif
+else (No)
+    :Display error message;
+    :Allow user to retry;
+    stop
+endif
+@enduml

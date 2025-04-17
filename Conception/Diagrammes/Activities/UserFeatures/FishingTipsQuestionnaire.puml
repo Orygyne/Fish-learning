@@ -1,0 +1,25 @@
+@startuml FishingTipsQUestionnaire
+:Login page;
+:Login form;
+:Send form;
+if (Valid input ?) then (Yes)
+    :Redirection to Dashboard;
+    :User click on fishing tips questionnaire button;
+    :User answer "where does he fish ?;
+    :at what time of the month ?;
+    :at what time of the day ?;
+    :what species is he looking for ?;
+    :Will he fish on boat or shore ?;
+    :What type of fishing does he looking for pleasure or trophy ?;
+    :Will he fish with lures or baits ?;
+    :What kind of budget does he have in mind ?;
+    :Display selection of fishable fish;
+    :User can select one fish or more;
+    :Display selections by categories;
+    stop
+else (No)
+    :Display error message;
+    :Allow user to retry;
+    stop
+endif
+@enduml
