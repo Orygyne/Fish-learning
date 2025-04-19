@@ -2,8 +2,15 @@
 
 start
 :User click on "fishing tips";
-if () then ()
-else ()
+if (Geo-location authorized) then (Yes)
+    :System detects user zone;
+    :System fetches popular fish and gear in this zone;
+    :System display popular used items;
+else (No)
+    :User can choose location manually;
+    :User select fishing regions;
+    :Proceed with questionnaire normally;
 endif
+:System displays recommandations;
 stop
 @enduml
