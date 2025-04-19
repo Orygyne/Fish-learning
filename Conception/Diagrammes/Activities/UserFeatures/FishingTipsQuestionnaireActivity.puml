@@ -1,20 +1,23 @@
 @startuml FishingTipsQUestionnaire
+start
 :Login page;
 :Login form;
 :Send form;
 if (Valid input ?) then (Yes)
     :Redirection to Dashboard;
     :User click on fishing tips questionnaire button;
+    :User can skip non-mandatory questions;
     :User answer "where does he fish ?;
     :at what time of the month ?;
     :at what time of the day ?;
-    :what species is he looking for ?;
-    :Will he fish on boat or shore ?;
-    :What type of fishing does he looking for pleasure or trophy ?;
+    :what species is he targeting ?;
+    :Will he fish on boat or from the shore ?;
+    :Is he fishing for pleasure or trophy catch ?;
     :Will he fish with lures or baits ?;
     :What kind of budget does he have in mind ?;
     :Display selection of fishable fish;
     :User can select one fish or more;
+    :System process answers to generate tailored recommandations;
     :Display selections by categories;
     stop
 else (No)

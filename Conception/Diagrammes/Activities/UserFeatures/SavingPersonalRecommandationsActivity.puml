@@ -1,0 +1,23 @@
+@startuml SavingPersonalRecommandations
+start
+:User choose the recommandations section;
+if ("User selects an action") then ("Start new questionnaire")
+:User follows classical path;
+:System display results;
+else ("See history")
+:System display previous questionnaires with timestamps;
+:User can select and consult one item in the list;
+:On modal, User can choose between reading or replaying the questionnaire;
+if (User selects item) then (Choose replay)
+    :System pre-filled answers;
+    :System display answers which can be modified;
+else (Choose consult)
+    :System display directly the results;
+endif
+endif
+repeat
+    :User can save specific tiles;
+    :System display "item saved" when added to favoris;
+repeat while (User wants to save more)
+stop
+@enduml

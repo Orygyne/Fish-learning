@@ -1,4 +1,5 @@
 @startuml PersonalDataRequest
+start
 :Login page;
 :Login form;
 :Send form;

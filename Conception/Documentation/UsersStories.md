@@ -14,9 +14,13 @@ Utilisateur
 
 2. Recommandation de matériel
 
-    En tant qu'utilisateur connecté, je veux répondre à un questionnaire afin de recevoir des recommandations de matériel adaptées à ma situation (milieu, période, poisson recherché).
+    En tant qu'utilisateur connecté, je veux répondre à un questionnaire afin de recevoir des recommandations de matériel adaptées à ma situation (milieu, période, poisson recherché, etc).
+
+    En tant qu'utilisateur je veux pouvoir avoir accès à mon historique de questionnaires et pouvoir consulter les résultats ou pré-remplir mon questionnaire avec mes réponses précédentes.
 
     En tant qu'utilisateur connecté je veux pouvoir enregistrer des recommandations dans mes favoris.
+
+    En tant qu'utilisateur je veux pouvoir organiser mes favoris et supprimer des sélections.
 
 3. Consultation de fiches
 
@@ -26,7 +30,13 @@ Utilisateur
 
     En tant qu'utilisateur connecté, je veux lire des fiches sur les techniques de pêche afin de m’améliorer ou découvrir de nouvelles méthodes.
 
-    En tant qu'utilisateur connecté, je veux pouvoir faire une demande de modification sur la fiche que je consulte en cas d'erreur.
+    En tant qu'utilisateur connecté, je veux pouvoir suggérer une correction sur la fiche que je consulte en cas d'erreur.
+
+    En tant qu'utilisateur connecté, je veux pouvoir suivre ma demande de correction dans mon historique d'utilisateur.
+
+    En tant qu'utilisateur connecté je veux pouvoir enregistrer le matériel que j'utilise pour pêcher.
+
+    En tant qu'utilisateur connecté je veux pouvoir enregistrer mes captures et les lier avec mon matériel favoris
 
 4. Actualités
 
@@ -60,6 +70,8 @@ Administrateur
     En tant qu'administrateur je veux pouvoir obtenir des statistiques sur l'utilisation de l'application.
 
     En tant qu'administrateur je veux pouvoir accéder à un journal de logs.
+
+    En tant qu'administrateur, je veux pouvoir informer l'utilisateur du statut de traitement de son signalement d'erreur.
 
 Communauté (fonctionnalité future)
 

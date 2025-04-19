@@ -1,4 +1,5 @@
 @startuml AccountDeletion
+start
 :Login page;
 :Login form;
 :Send form;

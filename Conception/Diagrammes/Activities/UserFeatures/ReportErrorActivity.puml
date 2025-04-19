@@ -1,0 +1,23 @@
+@startuml ReportError
+
+|**Client**|
+start
+:User opens a fish/equipment/technique sheet;
+:User clicks on "Report an error ?";
+:System display error form;
+:User select a type of error;
+:Enter an explanation or a comment;
+:Validate input;
+|**System**|
+:Send error report to admin;
+:Send confirmation mail to user;
+:Log report in user's error report history;
+:Display confirmation message;
+if (Need confirmation ?) then (Yes)
+    :Show detailed confirmation message;
+else (No)
+    :Silent feedback;
+endif
+stop
+
+@enduml
