@@ -1,0 +1,9 @@
+@startuml ActivateLocationForTips
+
+start
+:User click on "fishing tips";
+if () then ()
+else ()
+endif
+stop
+@enduml
