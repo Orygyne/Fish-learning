@@ -1,0 +1,59 @@
+@startuml ManageDatas
+
+:Login to admin page;
+:Login form;
+:Send form;
+
+if (Valid input ?) then (Yes)
+    :Redirect to dashboard;
+    :Admin selects "User Management";
+
+    :Display list of users;
+    :Admin selects a user;
+
+    if (Action type?) then (Block user)
+        :Display confirmation modal;
+        if (Confirm ?) then (Yes)
+            :System blocks user;
+            :Display success message;
+        else (No)
+            :Action cancelled;
+            :Return to data management page;
+        endif
+    else if (Action type?) then (Delete user)
+        :Display deletion confirmation;
+        if (Confirm modification?) then (Yes)
+            :System deletes the user account;
+            :Display success message;
+        else (No)
+            :Action cancelled;
+            :Return to data management page;
+        endif
+    else if (Action type ?) then (Reset password)
+        :Display reset confirmation;
+        if (Confirm ?) then (Yes)
+            :System sends reset link to the user email;
+            :Display notification sent message;
+        else (No)
+            :Action cancelled;
+            :Return to data management page;
+        endif
+    else (Change role)
+        :Admin selects a new role from list;
+        :System displays confirmation modal;
+        if (Confirm deletion?) then (Yes)
+            :System updates the user role;
+            :Display success message;
+        else (No)
+            :Action cancelled;
+            :Return to data management page;
+        endif
+    endif
+
+else (No)
+    :Display error message;
+    :Allow user to retry;
+endif
+stop
+
+@enduml

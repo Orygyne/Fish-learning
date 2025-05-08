@@ -1,0 +1,32 @@
+@startuml ModifyProfile
+start
+:Login page;
+:Login form;
+:Send form;
+if (Valid input ?) then (Yes)
+    :Redirection to Dashboard;
+    :User click on application parameters icon;
+    :User navigate to profile management;
+    :System displays saved informations (if any);
+    :User modify desired fields;
+    :System checks validity of new input;
+    if (Valid modifications ?) then (Yes)
+        :Display confirmation modal for saving informations;
+        if (Confirm profile modifications) then (Yes)
+            :System save user informations;
+            stop
+        else (No)
+            :No changes saved;
+            :User is sent back to account management page;
+            stop
+        endif
+    else (No)
+        :Display error message (invalid fields);
+        :Allow user to correct fields;
+        back to :User modify desired fields;
+    endif
+else (No)
+    :Display error message;
+    :Allow user to retry;
+    stop
+@enduml

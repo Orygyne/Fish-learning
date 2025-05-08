@@ -1,0 +1,31 @@
+@startuml ViewSheets
+
+start
+:Login page;
+:Login form;
+:Send form;
+if (Valid input ?) then (Yes)
+    :Redirection to Dashboard;
+    :User click on "Consultation";
+    :User chooses a category (Fish / Equipment / Techniques);
+    :Display list of available sheets;
+
+    repeat
+        :User scrolls or filter the list;
+        :User selects a sheet;
+        :System displays sheet content;
+
+        if (User wants to report an error ?) then (Yes)
+            :Redirect to error form;
+        else (No)
+            :Return to sheet list;
+        endif
+
+    repeat while (User wants to consult more sheets)
+    stop
+else (No)
+    :Display error message;
+    :Allow user to retry;
+    stop
+endif
+@enduml

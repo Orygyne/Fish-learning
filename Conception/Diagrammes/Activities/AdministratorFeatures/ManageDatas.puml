@@ -1,0 +1,52 @@
+@startuml ManageDatas
+
+:Login to admin page;
+:Login form;
+:Send form;
+
+if (Valid input ?) then (Yes)
+    :Redirect to dashboard;
+    :Admin selects "Manage datas";
+    :Admin can choose between the type of data to manage;
+
+    if (Action type?) then (Upload)
+        :Admin uploads a data;
+        :System validates data format/size;
+        :System displays confirmation modal;
+        if (Confirm upload?) then (Yes)
+            :System uploads the data;
+            :Display success message;
+        else (No)
+            :Cancel upload;
+            :Return to data management page;
+        endif
+    else if (Action type?) then (Modify)
+        :Admin selects a data to modify;
+        :Admin makes changes to the data;
+        :System validates changes;
+        :System displays confirmation modal;
+        if (Confirm modification?) then (Yes)
+            :System applies the modifications;
+            :Display success message;
+        else (No)
+            :Cancel modifications;
+            :Return to data management page;
+        endif
+    else (Action type?) then (Delete)
+        :Admin selects a data to delete;
+        :System displays confirmation modal;
+        if (Confirm deletion?) then (Yes)
+            :System deletes the data;
+            :Display success message;
+        else (No)
+            :Cancel deletion;
+            :Return to data management page;
+        endif
+    endif
+else (No)
+    :Display error message;
+    :Allow user to retry;
+endif
+stop
+
+@enduml

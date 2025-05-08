@@ -1,0 +1,20 @@
+@startuml SubscribeToNewsletter
+start
+
+:User scrolls to footer;
+:User clicks on newsletter link;
+:System display newsletter modal;
+:User enters email address;
+:User submits the form;
+
+if (Valid email format ?) then (Yes)
+    :System register email;
+    :System displays confirmation;
+    :System send automatic mail with confirmation link (double opt-in)
+else (no)
+    :System shows error;
+    :Allow user to retry;
+endif
+
+stop
+@enduml

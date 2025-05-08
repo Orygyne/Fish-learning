@@ -1,0 +1,26 @@
+@startuml SeeRecommendations
+
+start
+:Login page;
+:Login form;
+:Send form;
+if (Valid input ?) then (Yes)
+    :Redirection to Dashboard;
+    :User click on "Saved recommendations";
+    :System display list of saved or recent recommendations;
+
+    repeat
+        :User scrolls or filter the list;
+        :User selects a recommendation;
+        :System displays recommendation details;
+        :User can save part of the recommandation;
+        :User returns to the list;
+    repeat while (User wants to see more recommendations)
+    stop
+else (No)
+    :Display error message;
+    :Allow user to retry;
+    stop
+endif
+
+@enduml

@@ -52,7 +52,7 @@ Utilisateur
 
     En tant qu'utilisateur ou visiteur je veux pouvoir choisir la langue de l'application.
 
-    En tant qu'utilisateur, je veux utiliser l’application en dark mode afin de réduire la fatigue visuelle en basse lumière.
+    En tant qu'utilisateur ou visiteur, je veux utiliser l’application en dark mode afin de réduire la fatigue visuelle en basse lumière.
 
     En tant qu'utilisateur en situation de handicap visuel, je veux avoir une interface accessible (lecteur ou visuel) afin de naviguer sans difficulté.
 

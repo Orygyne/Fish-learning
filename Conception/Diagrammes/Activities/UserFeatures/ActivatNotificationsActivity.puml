@@ -1,0 +1,26 @@
+@startuml ActivateNotifications
+start
+:Login page;
+:Login form;
+:Send form;
+if (Valid input ?) then (Yes)
+    :Redirection to Dashboard;
+    :User click on application parameters icon;
+    :User navigate to notifications management;
+    :System displays saved preferences (if any);
+    :User check each type of notifications he wants;
+    :User check each reception channels;
+    :Display confirmation modal for saving preferences;
+    if (Confirm notifications settings) then (Yes)
+        :System save user preferences;
+        stop
+    else (No)
+        :Nothing happen;
+        :User is sent back to account management page;
+        stop
+    endif
+else (No)
+    :Display error message;
+    :Allow user to retry;
+    stop
+    @enduml

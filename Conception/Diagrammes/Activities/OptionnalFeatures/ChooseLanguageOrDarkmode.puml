@@ -1,0 +1,19 @@
+@startuml ChooseLanguageOrDarkmode
+start
+:User accesses the homepage (no login required);
+if (User can toggle quick settings) then (Dark mode ?)
+    :User toggles Dark mode (on/off);
+    :System applies the theme instantly;
+else (App language ?)
+    :User selects a language (dropdown);
+    :System applies the selected language instantly;
+endif
+
+if (User is logged in ?) then (Yes)
+    :System saves preferences to user profile;
+else (No)
+    :Preferences saved locally (cookies or localStorage);
+endif
+
+stop
+@enduml

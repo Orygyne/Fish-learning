@@ -1,0 +1,28 @@
+@startuml ViewLogsAndStatistics
+
+start
+:Login to admin page;
+:Login form;
+:Send form;
+
+if (Valid input ?) then (Yes)
+    :Redirect to dashboard;
+    :Admin selects "Logs and Statistics";
+
+    if (Action type ?) then ("Statistics")
+        :Admin selects statistics type;
+        :System displays graphs and metrics;
+        :Admin can apply filters;
+        :Admin can export data;
+    else ("Logs")
+        :Admin scroll to logs section;
+        :Admin selects filterable list of logs;
+        :Admin can export logs;
+    endif
+else (No)
+    :Display error message;
+    :Allow user to retry;
+endif
+stop
+
+@enduml
