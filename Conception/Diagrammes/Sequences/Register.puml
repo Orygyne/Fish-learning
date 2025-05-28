@@ -1,0 +1,28 @@
+@startuml Register
+
+actor  User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+participant "Email Service" as Email
+
+User -> Frontend : Access the registration form
+Frontend -> User : Displays form
+User -> Frontend : fills registration data
+Frontend -> Backend : Sends registration data by POST method (/register)
+Backend -> Database : check if user already exist
+Database -> Backend : Test result
+
+alt User do not exist
+    Backend -> Database : User successfully registered
+    Database -> Backend : Send confirmation
+    Backend -> Email : Send activation link by email
+    Email -> Backend : Email sent confirmation
+    Backend -> Frontend : Send success message
+    Frontend -> User : Ask User to confirm by using the link
+
+else User exist
+    Backend -> Frontend : Error - Email already in use
+    Frontend -> User : Display error message
+end
+@enduml

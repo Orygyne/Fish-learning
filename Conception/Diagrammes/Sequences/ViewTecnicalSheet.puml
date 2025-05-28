@@ -1,0 +1,25 @@
+@startuml ViewTecnicalSheet
+
+actor  User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+User -> Frontend : Navigate to technical sheets section
+Frontend -> Backend : Sent GET request /sheets with bound parameters (fish, fishing technique, equipment)
+Backend -> Database : Request available data
+Database -> Backend : Send available data
+Backend -> Frontend : return filtered data
+Frontend -> User : Display sheets
+
+User -> Frontend : User select sheet
+Frontend -> Backend : Sent GET request /sheet with bound id
+Backend -> Database : Request available data
+Database -> Backend : Send available data
+Backend -> Frontend : return formatted data
+Frontend -> User : Display sheet
+
+User -> Frontend : Select return
+Frontend -> User : Display sheets list
+
+@enduml

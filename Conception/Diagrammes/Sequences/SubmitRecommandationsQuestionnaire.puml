@@ -1,0 +1,23 @@
+@startuml RecommandationQuestionnaire
+
+actor  User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+participant "Recommandation Engine" as Engine
+
+
+User -> Frontend : Select recommandations questionnaire
+Frontend -> User : Display questions
+User -> Frontend : User send form
+Frontend -> Backend : Sends POST request (/recommandations)
+
+Backend -> Engine : Send form values and analyze
+Engine -> Database : Get recommandations values
+Database -> Engine : Send recommandations values
+Engine -> Backend : Create personal recommandations
+
+Backend -> Frontend : Send personal recommandations
+Frontend -> User : Display recommandations
+
+@enduml
