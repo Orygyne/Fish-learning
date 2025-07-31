@@ -1,0 +1,43 @@
+@startuml FavoriteRecommendations
+
+actor  User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+User -> Frontend : Navigate to recommandations section
+Frontend -> Backend : Sent GET request /recommandations
+Backend -> Database : Request available data
+Database -> Backend : Send available data
+Backend -> Frontend : return filtered data
+Frontend -> User : Display recommandations
+
+User -> Frontend : User clics on "Add to favorite"
+Frontend -> Backend : Sent POST request /favorites with bound id
+Backend -> Database : save id to favorite table
+Database -> Backend : Send confirmation
+Backend -> Frontend : return success
+Frontend -> User : Display success message
+
+User -> Frontend : Navigate to favorites section
+Frontend -> Backend : Sent GET request /favorites
+Backend -> Database : Request available data
+Database -> Backend : Send available data
+Backend -> Frontend : return filtered data
+Frontend -> User : Display favorites
+
+User -> Frontend : User select a favorite
+Frontend -> Backend : Sent GET request /favorites with bound id
+Backend -> Database : Request id to favorite table
+Database -> Backend : Send available data
+Backend -> Frontend : return data
+Frontend -> User : Display data
+
+User -> Frontend : User clics on "delete a favorite"
+Frontend -> Backend : Sent DELETE request /favorites with bound id
+Backend -> Database : delete favorite
+Database -> Backend : Send confirmation
+Backend -> Frontend : return success
+Frontend -> User : Display success message
+
+@enduml

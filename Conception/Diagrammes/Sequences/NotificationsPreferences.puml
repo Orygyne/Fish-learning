@@ -1,0 +1,23 @@
+@startuml NotificationsPreferences
+
+actor  User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+
+User -> Frontend : Navigate to parameters preferences section
+Frontend -> Backend : Sent GET request user/parameters/preferences
+Backend -> Database : SELECT user preferences
+Database -> Backend : Send available data
+Backend -> Frontend : return data
+Frontend -> User : Display user preferences
+
+User -> Frontend : User toggles each preferences he needs
+Frontend -> Backend : Sent PATCH request /preferences with bound id and boolean value
+Backend -> Database : Update user preferences
+Database -> Backend : Send success event
+Backend -> Frontend : return success event
+Frontend -> User : Display actualized preferences
+
+@enduml

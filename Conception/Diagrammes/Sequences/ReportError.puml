@@ -1,0 +1,25 @@
+@startuml FavoriteRecommendations
+
+actor  User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+participant "Admin notification service" as Notify
+
+User -> Frontend : User clics on "report an error"
+Frontend -> Backend : Sent GET request /report-error with bound item id
+Backend -> Database : Request available data
+Database -> Backend : Send report error form
+Backend -> Frontend : return report error form
+Frontend -> User : Display form
+
+User -> Frontend : User fills error form and send it
+Frontend -> Backend : Sent POST request /report-error
+Backend -> Database : save reported error
+Database -> Backend : Send confirmation
+Backend -> Notify : send reported error notification
+Notify -> Frontend : return success
+Backend -> Frontend : return success
+Frontend -> User : Display success message
+
+@enduml
