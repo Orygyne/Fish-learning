@@ -26,11 +26,22 @@ Utilisateur
 
     En tant que utilisateur connecté, je veux consulter des fiches descriptives sur les poissons afin de mieux les connaître et adapter ma pêche.
 
+    En tant que utilisateur connecté, je veux consulter des fiches descriptives sur les milieux afin de mieux les connaître et adapter ma pêche.
+
     En tant qu'utilisateur connecté, je veux lire des fiches sur le matériel de pêche afin de choisir le bon équipement.
 
     En tant qu'utilisateur connecté, je veux lire des fiches sur les techniques de pêche afin de m’améliorer ou découvrir de nouvelles méthodes.
 
+    En tant que utilisateur connecté, je veux pouvoir filtrer les fiches avec une sélection de filtres comprenant :
+
+        - La période
+        - Le milieu
+        - L’espèce
+        - Le type de pêche
+
     En tant qu'utilisateur connecté, je veux pouvoir suggérer une correction sur la fiche que je consulte en cas d'erreur.
+
+    En tant qu'utilisateur connecté, je veux pouvoir enregistrer mes prises avec une photo et les consulter sous forme de liste.
 
     En tant qu'utilisateur connecté, je veux pouvoir suivre ma demande de correction dans mon historique d'utilisateur.
 
@@ -81,8 +92,12 @@ Communauté (fonctionnalité future)
 
     En tant qu'utilisateur, je veux lire les conseils d'autres utilisateurs afin de bénéficier de retours concrets.
 
+    En tant qu'utilisateur, je veux pouvoir signaler les comportements inappropriés dans les sections communautaires
+
 Technique
 
 8. Troubleshooting
 
     En tant que visiteur/utilisateur je veux pouvoir accéder à une FAQ.
+
+    En tant que visiteur/utilisateur je veux pouvoir accéder à aux CGU.

@@ -11,7 +11,7 @@ Le concept de l'application est de proposer aux pêcheurs des outils pour appren
 # Fonctionnalités principales
 
 - Système de recommandation de matériel en fonction des périodes et conditions par le biais d'un questionnaire.
-- Sections comprenant des fiches descriptives du matériel et des poissons
+- Sections comprenant des fiches descriptives du matériel et des poissons, des lieux.
 - Section comprenant des fiches descriptives sur les techniques de pêche
 - Section des actualités liées aux milieux aquatiques
 - Profils utilisateurs (avec préférences, historique, etc.)
